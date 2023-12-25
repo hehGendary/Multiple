@@ -75,7 +75,7 @@ public class Expr {
     }
 
     private Value un() {
-        if (str == "-") return asVal(-exprs.get(0).eval().asNum());
+        if (str.equals("-")) return asVal(-exprs.get(0).eval().asNum());
         return exprs.get(0).eval();
     }
 
